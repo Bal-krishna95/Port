@@ -252,15 +252,8 @@ if (form) {
 ['download-resume', 'about-resume'].forEach(id => {
   const btn = document.getElementById(id);
   if (!btn) return;
-  btn.addEventListener('click', e => {
-    e.preventDefault();
-    const original     = btn.innerHTML;
-    btn.innerHTML      = '<i class="fa fa-info-circle"></i> Resume not uploaded yet';
-    btn.style.opacity  = '0.7';
-    setTimeout(() => {
-      btn.innerHTML     = original;
-      btn.style.opacity = '';
-    }, 2800);
+  btn.addEventListener('click', ()=> {
+   console.log("resume link clicked");
   });
 });
 
